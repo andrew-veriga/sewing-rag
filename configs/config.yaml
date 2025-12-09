@@ -1,0 +1,43 @@
+# PDF2AlloyDB Application Configuration
+
+# LLM Configuration
+llm:
+  model_name: "gemini-2.5-flash"  # Override with GEMINI_MODEL_NAME env var
+
+# Vertex AI Configuration
+vertex_ai:
+  embedding_model: "text-embedding-005"  # Override with VERTEX_AI_EMBEDDING_MODEL env var
+  region: "us-central1"  # Override with GOOGLE_CLOUD_REGION env var
+
+# Google Drive Configuration
+drive:
+  folder_id: ""  # Override with GOOGLE_DRIVE_FOLDER_ID env var
+  max_file_size_mb: 100
+
+# PDF Processing Configuration
+pdf:
+  dpi: 300
+  max_image_size: [1024, 1024]
+  supported_formats:
+    - "application/pdf"
+
+# Database Configuration
+database:
+  pool_size: 5
+  max_overflow: 10
+  pool_timeout: 30
+  pool_recycle: 3600
+
+# API Configuration
+api:
+  host: "0.0.0.0"
+  port: 8000
+  reload: false
+  log_level: "info"
+
+# Vector Search Configuration
+vector_search:
+  default_limit: 10
+  max_limit: 100
+  similarity_threshold: 0.0
+
